@@ -1,3 +1,3 @@
 require('./bootstrap');
 
-import Example from './components/Example';
+import Avatar from './components/Avatar';
