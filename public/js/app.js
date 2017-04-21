@@ -11054,39 +11054,38 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Example = function (_Component) {
-    _inherits(Example, _Component);
+var Avatar = function (_Component) {
+    _inherits(Avatar, _Component);
 
-    function Example() {
-        _classCallCheck(this, Example);
+    function Avatar() {
+        _classCallCheck(this, Avatar);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Avatar.__proto__ || Object.getPrototypeOf(Avatar)).apply(this, arguments));
     }
 
-    _createClass(Example, [{
+    _createClass(Avatar, [{
         key: 'render',
         value: function render() {
+            var style = {
+                width: '100px'
+            };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h1',
-                    null,
-                    'Cool, its working'
-                )
+                { className: 'avatar' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { style: style, src: this.props.src })
             );
         }
     }]);
 
-    return Example;
+    return Avatar;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Example);
+/* unused harmony default export */ var _unused_webpack_default_export = (Avatar);
 
 // We only want to try to render our component on pages that have a div with an ID
 // of "example"; otherwise, we will see an error in our console 
 if (document.getElementById('example')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Avatar, { src: 'https://maxcdn.icons8.com/Share/icon/Cinema/avatar1600.png' }), document.getElementById('example'));
 }
 
 /***/ }),

@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Example extends Component {
+class Avatar extends Component {
     render() {
+    	const style = {
+			width: '100px',
+		};
         return (
-            <div>
-                <h1>Cool, its working</h1>
+            <div className='avatar'>
+                <img style={style} src={this.props.src} />
             </div>
         );
     }
 }
 
-export default Example;
+export default Avatar;
 
 // We only want to try to render our component on pages that have a div with an ID
 // of "example"; otherwise, we will see an error in our console 
 if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
+    ReactDOM.render(<Avatar src="https://maxcdn.icons8.com/Share/icon/Cinema/avatar1600.png" />, document.getElementById('example'));
 }
