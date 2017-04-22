@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Avatar extends Component {
+class Avatar extends React.Component {
     render() {
     	const style = {
 			width: '100px',
