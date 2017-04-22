@@ -10,7 +10,7 @@ class TaskList extends Component{
 	}
 
 	render() {
-		var displayTask = (task) => <li>{task}</li>;
+		var displayTask = (task) => <li>{task} <button onClick={ this.props.deleteTask }>Delete</button></li>;
 		return (
 			<ul>
 				{ this.props.items.map( displayTask) }

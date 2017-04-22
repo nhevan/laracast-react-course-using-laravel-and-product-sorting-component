@@ -13,6 +13,10 @@ class TaskApp extends Component{
 		this.onChange = this.onChange.bind(this);
 	}
 
+	deleteTask() {
+		alert("caled on parent");
+	}
+
 	onChange(e) {
 		this.setState({ task: e.target.value});
 	}
@@ -30,7 +34,7 @@ class TaskApp extends Component{
 		return (
 			<div>
 				<h2>My Task App</h2>
-				<TaskList items={this.state.items} />
+				<TaskList deleteTask={ this.deleteTask } items={this.state.items} />
 				<form onSubmit={ this.addTask } >
 					<input onChange={this.onChange} value={ this.state.task }/>
 					<button>Add Task</button>

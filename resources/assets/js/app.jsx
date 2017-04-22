@@ -13,5 +13,5 @@ if (document.getElementById('counter')) {
 }
 
 if (document.getElementById('taskApp')) {
-    ReactDOM.render(<TaskApp items={['three', 'four']}/>, document.getElementById('taskApp'));
+    ReactDOM.render(<TaskApp />, document.getElementById('taskApp'));
 }
