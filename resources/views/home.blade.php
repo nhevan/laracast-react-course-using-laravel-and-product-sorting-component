@@ -8,8 +8,10 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    <div id="example"></div>
-                    <div id="counter"></div>
+                    {{-- <div id="example"></div>
+                    <div id="counter"></div> --}}
+                    <div id="taskApp"></div>
+                    <div id="task-list"></div>
                     You are logged in!
                 </div>
             </div>
