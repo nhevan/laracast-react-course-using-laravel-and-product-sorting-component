@@ -10,7 +10,8 @@
                 <div class="panel-body">
                     {{-- <div id="example"></div>
                     <div id="counter"></div> --}}
-                    <div id="taskApp"></div>
+                    {{-- <div id="taskApp"></div> --}}
+                    <div id="gistBox"></div>
                     You are logged in!
                 </div>
             </div>
