@@ -11,7 +11,6 @@
                     {{-- <div id="example"></div>
                     <div id="counter"></div> --}}
                     <div id="taskApp"></div>
-                    <div id="task-list"></div>
                     You are logged in!
                 </div>
             </div>

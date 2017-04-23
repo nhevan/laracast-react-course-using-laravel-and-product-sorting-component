@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import TaskList from './TaskList';
 
 class TaskApp extends Component{
+	
+	/**
+	 * sets up states and binds methods to this variable
+	 * @param  {[type]} props [description]
+	 * @return {[type]}       [description]
+	 */
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -11,16 +17,34 @@ class TaskApp extends Component{
 		}
 		this.addTask = this.addTask.bind(this);
 		this.onChange = this.onChange.bind(this);
+		this.deleteTask = this.deleteTask.bind(this);
 	}
 
-	deleteTask() {
-		alert("caled on parent");
+	/**
+	 * removes a task from the items array
+	 * @return void
+	 */
+	deleteTask(e) {
+		var task_index = e.target.id;
+		var items = this.state.items;
+
+		items.splice(task_index, 1);
+		this.setState({items});
 	}
 
+	/**
+	 * keeps the value of task input in sync with the state variable named task
+	 * @param  {[type]} e [description]
+	 * @return {[type]}   [description]
+	 */
 	onChange(e) {
 		this.setState({ task: e.target.value});
 	}
 
+	/**
+	 * adds a new task
+	 * @param {[type]} e [description]
+	 */
 	addTask(e) {
 		e.preventDefault();
 
@@ -30,6 +54,10 @@ class TaskApp extends Component{
 		});
 	}
 
+	/**
+	 * renders the component
+	 * @return {[type]} [description]
+	 */
 	render() {
 		return (
 			<div>
