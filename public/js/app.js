@@ -11447,8 +11447,8 @@ var GistBox = function (_Component) {
 
 	}, {
 		key: 'displayGist',
-		value: function displayGist(gist) {
-			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gist__["a" /* default */], { username: gist.username, url: gist.url });
+		value: function displayGist(gist, index) {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gist__["a" /* default */], { key: index, username: gist.username, url: gist.url });
 		}
 
 		/**
@@ -11470,8 +11470,8 @@ var GistBox = function (_Component) {
 					'Gist Box'
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__GistAddForm__["a" /* default */], { onAdd: this.addGist }),
-				this.state.gists.map(function (gist) {
-					return _this2.displayGist(gist);
+				this.state.gists.map(function (gist, index) {
+					return _this2.displayGist(gist, index);
 				})
 			);
 		}

@@ -38,8 +38,8 @@ class GistBox extends Component{
 	 * displays a single gist
 	 * @return {[type]} [description]
 	 */
-	displayGist(gist) {
-		return <Gist username={gist.username} url={gist.url} />
+	displayGist(gist, index) {
+		return <Gist key={index} username={gist.username} url={gist.url} />
 	}
 
 	/**
@@ -52,7 +52,7 @@ class GistBox extends Component{
 				<h1>Gist Box</h1>
 
 				<GistAddForm onAdd={this.addGist}></GistAddForm>
-				{ this.state.gists.map((gist) => this.displayGist(gist)) }
+				{ this.state.gists.map((gist, index) => this.displayGist(gist, index)) }
 			</div>
 		);
 	}
