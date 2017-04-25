@@ -11,8 +11,8 @@
                     {{-- <div id="example"></div>
                     <div id="counter"></div> --}}
                     {{-- <div id="taskApp"></div> --}}
-                    <div id="gistBox"></div>
-                    You are logged in!
+                    {{-- <div id="gistBox"></div> --}}
+                    <div id="filterable-product-table"></div>
                 </div>
             </div>
         </div>
